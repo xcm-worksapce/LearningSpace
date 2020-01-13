@@ -1,0 +1,13 @@
+1.ubuntu安装软件：sudo apt-get install softwareName, 一般安装在/usr下，/usr/lib /usr/include /usr/src /usr/bin等。
+2.linux环境变量是指操作系统运行环境一些参数，想要查看变量值，需要加上$符。
+查看：echo $PATH; 设置新的环境变量 export PATH="$PATH:/opt/build/bin",让环境变量立即生效的命令：source /etc/profile source /etc/.bashrc;如果不执行export,变量在关闭shell时失败。
+3.linux根目录下的目录结构是/. bin:二进制命令；boot:内核及引导系统程序；dev:设备文件的目录（声卡、光驱）；etc:二进制安装包配置文件默认路径；home:用户的默认数据存放目录。
+4.给a.sh加上执行权限，输入命令：chmod u+x a.sh,给所有.sh脚本添加执行权限：chmod u+x *.sh
+5.chown -R -v xiang:xiang a.sh,将当前路径下的a.sh所有者改为xiang:xiang.-R这里不用，文件时递归用 -v显示详细的处理信息。
+
+1.SLAMZ在自动驾驶、AR/VR、手持设备、无人机定位等中应用；
+2.SLMAN中，定位需要周围环境（地图信息），建图又需要知道摄像机或机器人的位置，二者是耦合关系，是同时优化问题。
+3.第一阶段：定位和建图是分开研究的阶段；第二阶段：定位和建图一起研究的阶段；第三个阶段：开始运用摄像头阶段（之前的计算机视觉还不发达，主要使用激光测距这种方法）；第四阶段：多元阶段（SLAM和深度学习融合，视觉和惯性传感器融合，现代是最好的阶段）。
+4.《LSD-SLAM:Large-Scale Direct Monocular SLAM》直接法的代表性文章；
+《ORB-SLAM:ORB-SLAM: a Versatile and Accurate Monocular SLAM System>(特征法的代表性文档，后续的ORB-SLAM2还开发出单目、双目、RGB-D的开源代码，且代码很好，值得学习；《VINS-Mono:A Robust and Versatile Monocular Visual Inertial State Estimation>(经典的视觉和IMU融合的方法，值得学习）
+
